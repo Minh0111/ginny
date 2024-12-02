@@ -33,6 +33,7 @@
             font-size: 3em;
             margin-bottom: 20px;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            animation: highlight 2s infinite;
         }
         p {
             font-size: 1.1em;
@@ -104,6 +105,14 @@
             100% {
                 opacity: 1;
                 transform: translateY(0);
+            }
+        }
+        @keyframes highlight {
+            0%, 100% {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            }
+            50% {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 1);
             }
         }
     </style>
