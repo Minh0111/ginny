@@ -6,11 +6,11 @@
     <meta name="description" content="Trang thông tin cá nhân của tôi và thông tin liên lạc.">
     <title>Thông Tin Cá Nhân</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Pacifico&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f7f7f7;
+            background-color: #1a1a1a; /* Nền tối */
             margin: 0;
             padding: 0;
         }
@@ -18,28 +18,35 @@
             max-width: 900px;
             margin: 40px auto;
             padding: 30px;
-            background-color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #2c3e50; /* Màu nền container tối */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             border-radius: 10px;
             text-align: center;
-            background: linear-gradient(145deg, #ffffff, #f0f0f0);
+            background: linear-gradient(145deg, #2c3e50, #34495e); /* Gradient tối */
+            animation: fadeIn 1.5s ease-in-out;
         }
         h1 {
-            color: #333;
-            font-size: 2.5em;
+            font-family: 'Pacifico', cursive;
+            color: #ecf0f1; /* Màu chữ sáng */
+            font-size: 3em;
             margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
         }
         p {
             font-size: 1.1em;
             line-height: 1.8;
-            color: #555;
+            color: #bdc3c7; /* Màu chữ sáng để dễ đọc */
         }
         .profile-pic {
             border-radius: 50%;
             width: 180px;
             height: 180px;
             margin: 20px auto;
-            border: 4px solid #4CAF50;
+            border: 4px solid #ecf0f1; /* Viền ảnh sáng để nổi bật */
+            transition: transform 0.3s ease-in-out;
+        }
+        .profile-pic:hover {
+            transform: scale(1.1);
         }
         ul {
             list-style-type: none;
@@ -53,24 +60,26 @@
         ul li a {
             text-decoration: none;
             font-size: 1.1em;
-            color: #4CAF50;
-            transition: color 0.3s ease;
+            color: #ecf0f1; /* Liên kết màu sáng */
+            transition: color 0.3s ease, transform 0.3s ease;
         }
         ul li a:hover {
-            color: #333;
+            color: #f39c12; /* Màu sắc hover sáng, ví dụ vàng */
+            transform: translateY(-3px);
         }
         .contact-btn {
             padding: 12px 25px;
             font-size: 1.1em;
-            background-color: #4CAF50;
+            background-color: #f39c12; /* Màu nút sáng nổi bật */
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
         .contact-btn:hover {
-            background-color: #45a049;
+            background-color: #e67e22; /* Màu hover cho nút */
+            transform: translateY(-3px);
         }
         @media screen and (max-width: 600px) {
             .container {
@@ -78,11 +87,21 @@
                 margin: 20px;
             }
             h1 {
-                font-size: 2em;
+                font-size: 2.5em;
             }
             .profile-pic {
                 width: 150px;
                 height: 150px;
+            }
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
     </style>
