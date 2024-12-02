@@ -103,6 +103,41 @@
             transform: translateY(-3px);
         }
 
+        /* Thêm trái tim */
+        .heart {
+            position: relative;
+            display: inline-block;
+            font-size: 2em;
+            color: #e74c3c;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .heart:hover {
+            transform: scale(1.2); /* Phóng to khi hover */
+            color: #f39c12; /* Đổi màu khi hover */
+        }
+
+        .heart:before {
+            content: "❤️";
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.3);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
         /* Media Queries cho các thiết bị nhỏ hơn */
         @media screen and (max-width: 768px) {
             .container {
@@ -180,6 +215,7 @@
             <li><a href="https://github.com/minh0111" target="_blank">GitHub</a></li>
         </ul>
         <button class="contact-btn" onclick="window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank')">Xem Video Của Tôi</button>
+        <div class="heart" onclick="alert('Bạn vừa nhấn trái tim!')">❤️</div>
     </div>
 </body>
 </html>
