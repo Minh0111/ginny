@@ -49,6 +49,7 @@
             font-size: 1.1em;
             line-height: 1.8;
             color: #555; /* Màu chữ đậm hơn để dễ đọc */
+            animation: slideIn 1s ease-in-out forwards;
         }
 
         .profile-pic {
@@ -61,7 +62,7 @@
         }
 
         .profile-pic:hover {
-            transform: scale(1.1);
+            transform: scale(1.1); /* Mở rộng khi di chuột qua */
         }
 
         ul {
@@ -164,6 +165,17 @@
             }
             50% {
                 text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
             }
         }
     </style>
