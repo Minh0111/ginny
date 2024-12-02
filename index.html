@@ -6,7 +6,7 @@
     <meta name="description" content="Trang thông tin cá nhân của tôi và thông tin liên lạc.">
     <title>Thông Tin Cá Nhân</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Pacifico&family=Quicksand:wght@500&display=swap" rel="stylesheet">
     <style>
         /* Reset một số phần mặc định của trình duyệt */
         * {
@@ -16,10 +16,9 @@
         }
 
         body {
-            font-family: 'Roboto', sans-serif;
-            background-image: url('https://khoinguonsangtao.vn/wp-content/uploads/2022/10/hinh-anh-vu-tru-ngan-ha.jpg'); /* Thay thế URL này bằng đường dẫn ảnh của bạn */
-            background-size: cover; /* Làm cho ảnh phủ hết toàn bộ màn hình */
-            background-position: center; /* Đặt ảnh ở giữa màn hình */
+            font-family: 'Quicksand', sans-serif;
+            background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png'); /* Hình nền dễ thương */
+            background-color: #fef1f9; /* Màu nền sáng */
             margin: 0;
             padding: 0;
         }
@@ -28,27 +27,27 @@
             max-width: 900px;
             margin: 40px auto;
             padding: 30px;
-            background-color: rgba(44, 62, 80, 0.8); /* Màu nền tối với độ mờ cho container */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            border-radius: 10px;
+            background-color: rgba(255, 182, 193, 0.9); /* Màu hồng nhẹ */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
             text-align: center;
-            background: linear-gradient(145deg, #2c3e50, #34495e); /* Gradient tối */
+            background: linear-gradient(145deg, #ffb6c1, #ff69b4); /* Gradient màu hồng */
             animation: fadeIn 1.5s ease-in-out;
         }
 
         h1 {
             font-family: 'Pacifico', cursive;
-            color: #ecf0f1; /* Màu chữ sáng */
-            font-size: 3em;
+            color: #ff1493; /* Màu hồng đậm */
+            font-size: 3.5em;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-            animation: highlight 2s infinite;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
         }
 
         p {
-            font-size: 1.1em;
+            font-size: 1.2em;
             line-height: 1.8;
-            color: #bdc3c7; /* Màu chữ sáng để dễ đọc */
+            color: #d35400; /* Màu cam nhẹ */
+            margin-bottom: 20px;
         }
 
         .profile-pic {
@@ -56,12 +55,12 @@
             width: 180px;
             height: 180px;
             margin: 20px auto;
-            border: 4px solid #ecf0f1; /* Viền ảnh sáng để nổi bật */
+            border: 5px solid #ff1493; /* Viền hồng đậm */
             transition: transform 0.3s ease-in-out;
         }
 
         .profile-pic:hover {
-            transform: scale(1.1);
+            transform: scale(1.1) rotate(10deg); /* Hiệu ứng xoay khi hover */
         }
 
         ul {
@@ -77,29 +76,45 @@
 
         ul li a {
             text-decoration: none;
-            font-size: 1.1em;
-            color: #3498db; /* Màu sắc ban đầu của liên kết */
+            font-size: 1.2em;
+            color: #ff69b4;
             transition: color 0.3s ease, transform 0.3s ease;
+            position: relative;
+        }
+
+        ul li a::after {
+            content: '⭐';
+            position: absolute;
+            opacity: 0;
+            left: 50%;
+            top: 100%;
+            transform: translateX(-50%);
+            font-size: 1.5em;
+            transition: opacity 0.3s ease;
         }
 
         ul li a:hover {
-            color: #f39c12; /* Màu hover cho liên kết */
+            color: #ff1493;
             transform: translateY(-3px);
+        }
+
+        ul li a:hover::after {
+            opacity: 1;
         }
 
         .contact-btn {
             padding: 12px 25px;
-            font-size: 1.1em;
-            background-color: #f39c12; /* Màu nút sáng nổi bật */
+            font-size: 1.2em;
+            background-color: #ff1493;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 25px;
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
         .contact-btn:hover {
-            background-color: #e67e22; /* Màu hover cho nút */
+            background-color: #f39c12; /* Màu vàng khi hover */
             transform: translateY(-3px);
         }
 
@@ -107,15 +122,15 @@
         .heart {
             position: relative;
             display: inline-block;
-            font-size: 2em;
+            font-size: 3em;
             color: #e74c3c;
             cursor: pointer;
             transition: transform 0.3s ease;
         }
 
         .heart:hover {
-            transform: scale(1.2); /* Phóng to khi hover */
-            color: #f39c12; /* Đổi màu khi hover */
+            transform: scale(1.3);
+            color: #ff1493;
         }
 
         .heart:before {
@@ -131,7 +146,7 @@
                 transform: scale(1);
             }
             50% {
-                transform: scale(1.3);
+                transform: scale(1.2);
             }
             100% {
                 transform: scale(1);
@@ -146,12 +161,12 @@
             }
 
             h1 {
-                font-size: 2.5em;
+                font-size: 2.8em;
             }
 
             .profile-pic {
-                width: 150px;
-                height: 150px;
+                width: 160px;
+                height: 160px;
             }
 
             ul li {
@@ -160,7 +175,7 @@
             }
 
             .contact-btn {
-                font-size: 1em;
+                font-size: 1.1em;
                 padding: 10px 20px;
             }
         }
@@ -168,7 +183,7 @@
         /* Đảm bảo tính tương thích cho các màn hình điện thoại nhỏ hơn */
         @media screen and (max-width: 480px) {
             h1 {
-                font-size: 2em;
+                font-size: 2.5em;
             }
 
             .profile-pic {
@@ -177,7 +192,7 @@
             }
 
             .contact-btn {
-                font-size: 0.9em;
+                font-size: 1em;
                 padding: 8px 15px;
             }
         }
@@ -190,15 +205,6 @@
             100% {
                 opacity: 1;
                 transform: translateY(0);
-            }
-        }
-
-        @keyframes highlight {
-            0%, 100% {
-                text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-            }
-            50% {
-                text-shadow: 0 0 20px rgba(255, 255, 255, 1);
             }
         }
     </style>
