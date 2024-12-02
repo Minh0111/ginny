@@ -24,19 +24,21 @@
             padding: 0;
         }
 
-        .container { max-width: 900px; 
-                    margin: 40px auto; padding: 30px; 
-                    background-color: rgba(255, 182, 193, 0.8); /* Màu hồng nhạt với độ mờ */ 
-                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
-                    border-radius: 10px; 
-                    text-align: center;
-                    background: linear-gradient(145deg, #ffb6c1, #ffa6c9); /* Gradient hồng nhạt */ 
-                    animation: fadeIn 1.5s ease-in-out;
-                   }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: rgba(255, 228, 225, 0.9); /* Màu hồng nhạt hơn với độ mờ */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            text-align: center;
+            background: linear-gradient(145deg, #ffe4e1, #ffdddd); /* Gradient hồng nhạt hơn */
+            animation: fadeIn 1.5s ease-in-out;
+        }
 
         h1 {
             font-family: 'Pacifico', cursive;
-            color: #ecf0f1; /* Màu chữ sáng */
+            color: #333; /* Màu chữ đậm hơn để dễ đọc */
             font-size: 3em;
             margin-bottom: 20px;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
@@ -46,7 +48,7 @@
         p {
             font-size: 1.1em;
             line-height: 1.8;
-            color: #bdc3c7; /* Màu chữ sáng để dễ đọc */
+            color: #555; /* Màu chữ đậm hơn để dễ đọc */
         }
 
         .profile-pic {
@@ -54,7 +56,7 @@
             width: 180px;
             height: 180px;
             margin: 20px auto;
-            border: 4px solid #ecf0f1; /* Viền ảnh sáng để nổi bật */
+            border: 4px solid #fff; /* Viền ảnh sáng để nổi bật */
             transition: transform 0.3s ease-in-out;
         }
 
@@ -205,9 +207,16 @@
     <div class="container">
         <h1>Thông Tin Cá Nhân</h1>
         <img src="https://scontent.fsgn8-4.fna.fbcdn.net/v/t39.30808-6/468800034_2495338460857504_3059542099186891222_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=sFV72x_4UZ0Q7kNvgE9aorr&_nc_zt=23&_nc_ht=scontent.fsgn8-4.fna&_nc_gid=AW_ErdX3FA4GVN1M8pdV4Fn&oh=00_AYClEC5cxdwFvoOsBCWWmtsry6D13qLZ7PqB7ToO8WAIFA&oe=6753B2A5" alt="Profile Picture" class="profile-pic">
-        <p>Chào mừng đến với trang cá nhân của tôi! Tên tôi là Gin. Tôi hiện đang làm việc tại AXE với vị trí Nhân viên.</p> <p>Bạn có thể liên hệ với tôi qua các liên kết dưới đây:</p> <ul> <li><a href="https://facebook.com/Neko0111" target="_blank">Facebook</a></li> <li><a href="https://www.instagram.com/ginny0111/" target="_blank">Instagram</a></li> 
-            <li><a href="https://github.com/minh0111" target="_blank">GitHub</a></li> 
-        </ul> 
-        <button class="contact-btn" onclick="window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank')">Xem Video Của Tôi</button> </div> 
-</body> 
+        <p>Chào mừng đến với trang cá nhân của tôi! Tên tôi là Gin. Tôi hiện đang làm việc tại AXE với vị trí Nhân viên.</p>
+        <p>Bạn có thể liên hệ với tôi qua các liên kết dưới đây:</p>
+        <ul>
+            <li><a href="https://facebook.com/Neko0111" target="_blank">Facebook</a></li>
+            <li><a href="https://www.instagram.com/ginny0111/" target="_blank">Instagram</a></li>
+            <li><a href="https://github.com/minh0111" target="_blank">GitHub</a></li>
+        </ul>
+                <button class="contact-btn" onclick="window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank')">Xem Video Của Tôi</button>
+        <div class="heart" onclick="alert('Cảm ơn bạn đã nhấn vào trái tim!')"></div>
+    </div>
+</body>
 </html>
+
