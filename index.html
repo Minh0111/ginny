@@ -6,7 +6,7 @@
     <meta name="description" content="Trang thông tin cá nhân của tôi và thông tin liên lạc.">
     <title>Thông Tin Cá Nhân</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Pacifico&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Pacifico&display=swap" rel="stylesheet">
     <style>
         /* Reset một số phần mặc định của trình duyệt */
         * {
@@ -16,9 +16,10 @@
         }
 
         body {
-            font-family: 'Quicksand', sans-serif;
-            background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png'); /* Hình nền dễ thương */
-            background-color: #fef1f9; /* Màu nền sáng */
+            font-family: 'Roboto', sans-serif;
+            background-image: url('https://khoinguonsangtao.vn/wp-content/uploads/2022/10/hinh-anh-vu-tru-ngan-ha.jpg'); /* Thay thế URL này bằng đường dẫn ảnh của bạn */
+            background-size: cover; /* Làm cho ảnh phủ hết toàn bộ màn hình */
+            background-position: center; /* Đặt ảnh ở giữa màn hình */
             margin: 0;
             padding: 0;
         }
@@ -27,27 +28,27 @@
             max-width: 900px;
             margin: 40px auto;
             padding: 30px;
-            background-color: rgba(255, 182, 193, 0.9); /* Màu hồng nhẹ */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            border-radius: 15px;
+            background-color: rgba(255, 105, 180, 0.8); /* Màu hồng với độ mờ */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
             text-align: center;
-            background: linear-gradient(145deg, #ffb6c1, #ff69b4); /* Gradient màu hồng */
+            background: linear-gradient(145deg, #ff69b4, #ff1493); /* Gradient hồng */
             animation: fadeIn 1.5s ease-in-out;
         }
 
         h1 {
             font-family: 'Pacifico', cursive;
-            color: #ff1493; /* Màu hồng đậm */
-            font-size: 3.5em;
+            color: #ecf0f1; /* Màu chữ sáng */
+            font-size: 3em;
             margin-bottom: 20px;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            animation: highlight 2s infinite;
         }
 
         p {
-            font-size: 1.2em;
+            font-size: 1.1em;
             line-height: 1.8;
-            color: #d35400; /* Màu cam nhẹ */
-            margin-bottom: 20px;
+            color: #bdc3c7; /* Màu chữ sáng để dễ đọc */
         }
 
         .profile-pic {
@@ -55,12 +56,12 @@
             width: 180px;
             height: 180px;
             margin: 20px auto;
-            border: 5px solid #ff1493; /* Viền hồng đậm */
+            border: 4px solid #ecf0f1; /* Viền ảnh sáng để nổi bật */
             transition: transform 0.3s ease-in-out;
         }
 
         .profile-pic:hover {
-            transform: scale(1.1) rotate(10deg); /* Hiệu ứng xoay khi hover */
+            transform: scale(1.1);
         }
 
         ul {
@@ -76,45 +77,29 @@
 
         ul li a {
             text-decoration: none;
-            font-size: 1.2em;
-            color: #ff69b4;
+            font-size: 1.1em;
+            color: #3498db; /* Màu sắc ban đầu của liên kết */
             transition: color 0.3s ease, transform 0.3s ease;
-            position: relative;
-        }
-
-        ul li a::after {
-            content: '⭐';
-            position: absolute;
-            opacity: 0;
-            left: 50%;
-            top: 100%;
-            transform: translateX(-50%);
-            font-size: 1.5em;
-            transition: opacity 0.3s ease;
         }
 
         ul li a:hover {
-            color: #ff1493;
+            color: #f39c12; /* Màu hover cho liên kết */
             transform: translateY(-3px);
-        }
-
-        ul li a:hover::after {
-            opacity: 1;
         }
 
         .contact-btn {
             padding: 12px 25px;
-            font-size: 1.2em;
-            background-color: #ff1493;
+            font-size: 1.1em;
+            background-color: #f39c12; /* Màu nút sáng nổi bật */
             color: white;
             border: none;
-            border-radius: 25px;
+            border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
         .contact-btn:hover {
-            background-color: #f39c12; /* Màu vàng khi hover */
+            background-color: #e67e22; /* Màu hover cho nút */
             transform: translateY(-3px);
         }
 
@@ -122,15 +107,15 @@
         .heart {
             position: relative;
             display: inline-block;
-            font-size: 3em;
+            font-size: 2em;
             color: #e74c3c;
             cursor: pointer;
             transition: transform 0.3s ease;
         }
 
         .heart:hover {
-            transform: scale(1.3);
-            color: #ff1493;
+            transform: scale(1.2); /* Phóng to khi hover */
+            color: #f39c12; /* Đổi màu khi hover */
         }
 
         .heart:before {
@@ -146,7 +131,7 @@
                 transform: scale(1);
             }
             50% {
-                transform: scale(1.2);
+                transform: scale(1.3);
             }
             100% {
                 transform: scale(1);
@@ -161,12 +146,12 @@
             }
 
             h1 {
-                font-size: 2.8em;
+                font-size: 2.5em;
             }
 
             .profile-pic {
-                width: 160px;
-                height: 160px;
+                width: 150px;
+                height: 150px;
             }
 
             ul li {
@@ -175,7 +160,7 @@
             }
 
             .contact-btn {
-                font-size: 1.1em;
+                font-size: 1em;
                 padding: 10px 20px;
             }
         }
@@ -183,7 +168,7 @@
         /* Đảm bảo tính tương thích cho các màn hình điện thoại nhỏ hơn */
         @media screen and (max-width: 480px) {
             h1 {
-                font-size: 2.5em;
+                font-size: 2em;
             }
 
             .profile-pic {
@@ -192,7 +177,7 @@
             }
 
             .contact-btn {
-                font-size: 1em;
+                font-size: 0.9em;
                 padding: 8px 15px;
             }
         }
@@ -207,21 +192,24 @@
                 transform: translateY(0);
             }
         }
+
+        @keyframes highlight {
+            0%, 100% {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            }
+            50% {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Thông Tin Cá Nhân</h1>
         <img src="https://scontent.fsgn8-4.fna.fbcdn.net/v/t39.30808-6/468800034_2495338460857504_3059542099186891222_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=sFV72x_4UZ0Q7kNvgE9aorr&_nc_zt=23&_nc_ht=scontent.fsgn8-4.fna&_nc_gid=AW_ErdX3FA4GVN1M8pdV4Fn&oh=00_AYClEC5cxdwFvoOsBCWWmtsry6D13qLZ7PqB7ToO8WAIFA&oe=6753B2A5" alt="Profile Picture" class="profile-pic">
-        <p>Chào mừng đến với trang cá nhân của tôi! Tên tôi là Gin. Tôi hiện đang làm việc tại AXE với vị trí Nhân viên.</p>
-        <p>Bạn có thể liên hệ với tôi qua các liên kết dưới đây:</p>
-        <ul>
-            <li><a href="https://facebook.com/Neko0111" target="_blank">Facebook</a></li>
-            <li><a href="https://www.instagram.com/ginny0111/" target="_blank">Instagram</a></li>
-            <li><a href="https://github.com/minh0111" target="_blank">GitHub</a></li>
-        </ul>
-        <button class="contact-btn" onclick="window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank')">Xem Video Của Tôi</button>
-        <div class="heart" onclick="alert('Bạn vừa nhấn trái tim!')">❤️</div>
-    </div>
-</body>
+        <p>Chào mừng đến với trang cá nhân của tôi! Tên tôi là Gin. Tôi hiện đang làm việc tại AXE với vị trí Nhân viên.</p> <p>Bạn có thể liên hệ với tôi qua các liên kết dưới đây:</p> <ul> <li><a href="https://facebook.com/Neko0111" target="_blank">Facebook</a></li> <li><a href="https://www.instagram.com/ginny0111/" target="_blank">Instagram</a></li> 
+            <li><a href="https://github.com/minh0111" target="_blank">GitHub</a></li> 
+        </ul> 
+        <button class="contact-btn" onclick="window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank')">Xem Video Của Tôi</button> </div> 
+</body> 
 </html>
