@@ -36,7 +36,7 @@
             border-radius: 10px;
             animation: fadeIn 1.5s ease-in-out;
         }
-        
+
         .container::before {
             content: '';
             position: absolute;
@@ -48,13 +48,12 @@
             z-index: -1; /* Đảm bảo nền mờ nằm phía sau nội dung */
         }
 
-
         h1 {
             font-family: 'Pacifico', cursive;
             color: #3498db; /* Màu chữ xanh dương để dễ đọc */
             font-size: 3em;
             margin-bottom: 20px;
-            text-shadow: 0 0 10px rgba(52, 152, 219, 1), 0 0 20px rgba(52, 152, 219, 1), 0 0 30px rgba(52, 152, 219, 1), 0 0 40px rgba(52, 152, 219, 1), 0 0 50px rgba(52, 152, 219, 1), 0 0 60px rgba(52, 152, 219, 1), 0 0 70px rgba(52, 152, 219, 1); /* Ánh sáng */
+            text-shadow: 0 0 5px rgba(52, 152, 219, 1), 0 0 10px rgba(52, 152, 219, 1), 0 0 15px rgba(52, 152, 219, 1); /* Ánh sáng nhẹ */
             animation: neon 1.5s ease-in-out infinite alternate;
         }
 
@@ -185,11 +184,11 @@
 
         @keyframes neon {
             0% {
-                text-shadow: 0 0 5px #3498db, 0 0 10px #3498db, 0 0 15px #3498db, 0 0 20px #3498db, 0 0 25px #3498db, 0 0 30px #3498db, 0 0 35px #3498db;
+                text-shadow: 0 0 5px #3498db, 0 0 10px #3498db, 0 0 15px #3498db;
                 opacity: 1;
             }
             100% {
-                text-shadow: 0 0 20px #3498db, 0 0 25px #3498db, 0 0 30px #3498db, 0 0 35px #3498db, 0 0 40px #3498db, 0 0 45px #3498db, 0 0 50px #3498db;
+                text-shadow: 0 0 20px #3498db, 0 0 25px #3498db, 0 0 30px #3498db;
                 opacity: 0.8;
             }
         }
@@ -229,14 +228,14 @@
         }
     </style>
 </head>
-<body> 
-    <div class="container"> 
+<body>
+    <div class="container">
         <h1>Thông Tin Cá Nhân</h1>
         <img src="https://scontent.fsgn8-4.fna.fbcdn.net/v/t39.30808-6/468800034_2495338460857504_3059542099186891222_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=sFV72x_4UZ0Q7kNvgE9aorr&_nc_zt=23&_nc_ht=scontent.fsgn8-4.fna&_nc_gid=AW_ErdX3FA4GVN1M8pdV4Fn&oh=00_AYClEC5cxdwFvoOsBCWWmtsry6D13qLZ7PqB7ToO8WAIFA&oe=6753B2A5" alt="Ảnh đại diện của Gin" class="profile-pic">
         <p class="introduction">Chào mừng đến với trang cá nhân của tôi! Mình là Gin, một nhân viên dễ thương tại AXE. 😄</p>
         <p class="description">Hãy cùng khám phá các sở thích và cuộc sống của mình qua những liên kết dưới đây nhé! 🌸</p>
         <ul>
-            <li><a href="https://facebook.com/Neko0111" target="_blank" aria-label="Trang Facebook của Gin">Facebook</a></li>
+             <li><a href="https://facebook.com/Neko0111" target="_blank" aria-label="Trang Facebook của Gin">Facebook</a></li>
             <li><a href="https://www.instagram.com/ginny0111/" target="_blank" aria-label="Trang Instagram của Gin">Instagram</a></li>
             <li><a href="https://github.com/minh0111" target="_blank" aria-label="Trang GitHub của Gin">GitHub</a></li>
         </ul>
@@ -244,3 +243,4 @@
     </div>
 </body>
 </html>
+                
