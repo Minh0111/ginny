@@ -26,16 +26,28 @@
         }
 
         .container {
+            position: relative;
             max-width: 900px;
             margin: 40px auto;
             padding: 30px;
-            background-color: rgba(255, 228, 225, 0.9); /* Màu hồng nhạt hơn với độ mờ */
+            text-align: center;
+            background: linear-gradient(145deg, #ffe4e1, #ffdddd);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             border-radius: 10px;
-            text-align: center;
-            background: linear-gradient(145deg, #ffe4e1, #ffdddd); /* Gradient hồng nhạt hơn */
             animation: fadeIn 1.5s ease-in-out;
         }
+        
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 228, 225, 0.9); /* Màu nền mờ */
+            z-index: -1; /* Đảm bảo nền mờ nằm phía sau nội dung */
+        }
+
 
         h1 {
             font-family: 'Pacifico', cursive;
