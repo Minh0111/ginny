@@ -1,0 +1,190 @@
+/* Reset một số phần mặc định của trình duyệt */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('https://khoinguonsangtao.vn/wp-content/uploads/2022/10/hinh-anh-vu-tru-ngan-ha.jpg'); /* Thay thế URL này bằng đường dẫn ảnh của bạn */
+    background-size: cover; /* Làm cho ảnh phủ hết toàn bộ màn hình */
+    background-position: center; /* Đặt ảnh ở giữa màn hình */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    text-align: center;
+    background: linear-gradient(145deg, #ffe4e1, #ffdddd);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 228, 225, 0.9); /* Màu nền mờ */
+    z-index: -1; /* Đảm bảo nền mờ nằm phía sau nội dung */
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    color: #3498db; /* Màu chữ xanh dương để dễ đọc */
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 0 0 5px rgba(52, 152, 219, 1), 0 0 10px rgba(52, 152, 219, 1), 0 0 15px rgba(52, 152, 219, 1); /* Ánh sáng nhẹ */
+    animation: neon 1.5s ease-in-out infinite alternate;
+}
+
+.introduction {
+    font-size: 1.3em;
+    line-height: 1.8;
+    color: #3498db; /* Màu chữ xanh dương */
+    font-weight: bold;
+    font-family: 'Pacifico', cursive; /* Font chữ vui tươi */
+    margin-bottom: 10px;
+    animation: bounceIn 1s ease-in-out;
+}
+
+.description {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.8;
+    font-style: italic;
+    animation: fadeInDescription 1.5s ease-in-out;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    margin: 20px auto;
+    border: 4px solid #fff; /* Viền ảnh sáng để nổi bật */
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1); /* Mở rộng khi di chuột qua */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+ul li a {
+    text-decoration: none;
+    font-size: 1.1em;
+    color: #3498db; /* Màu sắc ban đầu của liên kết */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+ul li a:hover {
+    color: #f39c12; /* Màu hover cho liên kết */
+    transform: translateY(-3px);
+}
+
+.contact-btn {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    background-color: #f39c12; /* Màu nút sáng nổi bật */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #e67e22; /* Màu hover cho nút */
+    transform: translateY(-3px);
+}
+
+/* Media Queries cho các thiết bị nhỏ hơn */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+
+    ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .contact-btn {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
+
+/* Đảm bảo tính tương thích cho các màn hình điện thoại nhỏ hơn */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .profile-pic {
+        width: 130px;
+        height: 130px;
+    }
+
+    .contact-btn {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes neon {
+    0% {
+        text-shadow: 0 0 5px #3498db, 0 0 10px #3498db, 0 0 15px #3498db;
+        opacity: 1;
+    }
+    100% {
+        text-shadow: 0 0 20px #3498db, 0 0 25px #3498db, 0 0 30px #3498db;
+        opacity: 0.8;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+   [_{{{CITATION{{{_1{](https://github.com/cuongledev/fwtome/tree/eb2550856d3bd4af2bc680e053424296bdd21e15/tmp%2Fthemes%2Fteamplate.php)
